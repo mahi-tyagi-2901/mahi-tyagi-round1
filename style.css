@@ -154,12 +154,15 @@
 #about .map .net {
   position: absolute;
   bottom: 2px;
-  right: 2px;
-  width: 100%;
+  left: 0;
 }
 
 #about .explaination {
   z-index: 1;
+}
+
+#about .map img:first-child {
+  width: 100%;
 }
 
 #about .explaination h2 {
@@ -236,6 +239,12 @@
   margin-top: 18px;
 }
 
+#invest .right-area img {
+  width: 100%;
+}
+
+
+
 #footer {
   background: rgba(0, 9, 42, 1);
   display: grid;
@@ -299,7 +308,7 @@
   }
 
   #invest {
-    display: grid;
+    display: block;
   }
 
   #footer {
@@ -310,5 +319,29 @@
 
   #footer .right {
     justify-content: space-between;
+    row-gap: 55px;
+  }
+
+  #hero .market .marketcap-table {
+    overflow: scroll;
+    flex-wrap: unset;
+    justify-content: unset;
+    column-gap: 35px;
+  }
+  
+}
+
+@media only screen and (max-width: 560px)  {
+  #navbar .search {
+    display: none;
+}
+#navbar .features ul {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 11px;
+  margin-top: 11px;
+}
+#hero .market button {
+  margin-left: 0;
 }
 }
